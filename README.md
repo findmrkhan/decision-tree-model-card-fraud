@@ -4,5 +4,6 @@ A picture is worth more than thousand words! Hence we need better visualisations
 Below is the difference in images of dtreeviz vs the SKLearn library
 
 SKLearn | dtreeviz
-img/skl42_3.png | img/dtv42_3.png
+![SKLearn](img/skl42_3.png) | ![dtreeviz](img/dtv42_3.png)
+
 
