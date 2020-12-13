@@ -15,15 +15,23 @@ BASE_PATH = './'
 
 df = pd.read_csv(BASE_PATH + 'creditcard.csv')
 
-
+#function to create DtreeViz style graph
 def getDtreeVizImg(rand_state=42, max_depth=3):
     fname = BASE_IMG_PATH + "dtv" + str(rand_state) + '_' + str(max_depth) + '.png'
     if (not os.path.exists(fname)):
         X = df.drop(['Class'], axis=1)
         y = df['Class']
+
+        # Split the training and test dataset.
+        # Since in this program the focus is not on predictions
+        # but on creating a new style decision tree, the test set is unused
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=rand_state)
+        # initialise the decision tree model
         DecsTreeModel = DecisionTreeClassifier(criterion='entropy', max_depth=max_depth)
+        # train the model with the training set
         DecsTreeModel.fit(X_train, y_train)
+
+        # Creating the dtreeviz style decision tree
         viz = dtreeviz(DecsTreeModel,
                        X_train,
                        y_train,
@@ -43,6 +51,8 @@ def getDtreeVizImg(rand_state=42, max_depth=3):
 
     with open(fname, "rb") as image:
         img = image.read()
+        # The Base 64 format is useful for serialization of image data.
+        # Doing this enables the image data to be saved in peristent storage or transfer it over network.
         barray = base64.b64encode(img).decode('utf-8')
 
     return barray

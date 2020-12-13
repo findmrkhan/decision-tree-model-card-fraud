@@ -4,10 +4,12 @@ from PIL import Image
 from io import BytesIO
 
 
+#set the target domain name. for same machine use 0.0.0.0
 targeturl = '0.0.0.0'
 
 PORT = 5005
 
+#Choose the style SK Learn or the DtreeViz library
 #style = 'sklearn'
 style = 'dtreeviz'
 
@@ -29,10 +31,13 @@ def post2url():
     if res.status_code == 200 :
         print('Response image: ', res.json()['img'])
 
+        #Base 64 decoder to deserialise the image data stream
         im = Image.open(BytesIO(base64.b64decode(res.json()['img'])))
         im.save(fname, 'PNG')
-        #img = Image.open(fname)
-        #img.show()
+
+        #open the image in the default image viewer
+        img = Image.open(fname)
+        img.show()
 
     else:
         print (f"ERROR: status.code = {res.status_code}")
