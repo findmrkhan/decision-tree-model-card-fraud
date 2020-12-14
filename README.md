@@ -45,4 +45,4 @@ Then run the below command
 `python main.py`
 
 The below output shows the running app.
-[img](img/running-app.png)
+![](img/running-app.png)
