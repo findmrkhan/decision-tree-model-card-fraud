@@ -50,3 +50,10 @@ Then run the below command and Voila! your REST API is ready to be consumed.
 
 ## The client program to test the exposed API
 The file `post2url-client.py` has the code to consume the REST API by sending the JSON data.
+Open another terminal and run the below command
+
+`python post2url-client.py`
+
+The generated graph will be displayed on the screen.
+
+If there are any questions, suggestions or comments, please let me know @ findmrkhan@gmail.com
