@@ -4,7 +4,7 @@ from PIL import Image
 from io import BytesIO
 
 
-#set the target domain name. for same machine use 0.0.0.0
+#set the target domain name. for same machine use '0.0.0.0' or 'localhost'
 targeturl = '0.0.0.0'
 
 PORT = 5005
