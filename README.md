@@ -40,9 +40,13 @@ For running the application you need to have **Python 3** and **PIP** installed 
 
 `pip install -r requirements.txt`
 
-Then run the below command
+Then run the below command and Voila! your REST API is ready to be consumed.
 
 `python main.py`
 
-The below output shows the running app.
+
 ![](img/running-app.png)
+
+
+## The client program to test the exposed API
+The file `post2url-client.py` has the code to consume the REST API by sending the JSON data.
