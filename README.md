@@ -18,7 +18,8 @@ Below is the difference in images of **SKLearn vs dtreeviz** libraries.
 ![](img/dtv42_3.png)
 
 ## Difference in node representation
-The data shown in the **SKLearn** tree nodes is in text format which needs to be read and carefully understood to make sense of why the split of the tree was made at that value. In contrast the **dtreeviz** tree nodes are shown as graph which makes it very intuitive to understand why the split was made at that value. 
+Both the trees are 3 level deep. However, the graphical representation of dtreeviz nodes makes it a clear winner.
+The data shown in the **SKLearn** tree nodes is in text format which needs to be read and carefully understood to make sense of why the split of the tree was made at that value. In contrast the **dtreeviz** tree nodes are shown as graph which makes it very intuitive to understand why the split was made at that value. No further drilling down is needed into the data. This save a lot of time and energy. 
 
 ## Difference in color choice
 The color selection of **SKLearn** for coloring the nodes is not very obvious for the observer as it lacks the legend. However the **dtreeviz** has a color legend as part of its node which eliminates the guess that observers have to do.
